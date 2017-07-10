@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOS_NinjaGold" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,8 +21,112 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gold" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmL-zf-lDA">
+                                <rect key="frame" x="20" y="28" width="36" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GzA-pb-g1T">
+                                <rect key="frame" x="64" y="28" width="11" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qSD-GU-aq2">
+                                <rect key="frame" x="24" y="95" width="35" height="30"/>
+                                <state key="normal" title="Cave"/>
+                                <connections>
+                                    <action selector="bldgButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WRJ-Lw-1hN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gi1-5e-0mw">
+                                <rect key="frame" x="24" y="133" width="45" height="30"/>
+                                <state key="normal" title="House"/>
+                                <connections>
+                                    <action selector="bldgButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NGQ-Pj-8ay"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBq-9y-Eyn">
+                                <rect key="frame" x="24" y="171" width="47" height="30"/>
+                                <state key="normal" title="Casino"/>
+                                <connections>
+                                    <action selector="bldgButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SRo-4U-73t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xb2-WV-g3B">
+                                <rect key="frame" x="24" y="318" width="39" height="30"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="37V-8m-LJn"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QoT-fZ-mbA">
+                                <rect key="frame" x="67" y="61" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWE-yd-oC7">
+                                <rect key="frame" x="67" y="99" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aet-nl-8K8">
+                                <rect key="frame" x="77" y="137" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1t-RQ-uUf">
+                                <rect key="frame" x="79" y="175" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Id-nA-SyF">
+                                <rect key="frame" x="24" y="57" width="35" height="30"/>
+                                <state key="normal" title="Farm"/>
+                                <connections>
+                                    <action selector="bldgButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gog-bw-kg2"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Aet-nl-8K8" firstAttribute="baseline" secondItem="Gi1-5e-0mw" secondAttribute="baseline" id="2Sr-Hg-0ty"/>
+                            <constraint firstItem="0Id-nA-SyF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="4za-UT-d7W"/>
+                            <constraint firstItem="mBq-9y-Eyn" firstAttribute="top" secondItem="Gi1-5e-0mw" secondAttribute="bottom" constant="8" symbolic="YES" id="Cfm-CD-QBi"/>
+                            <constraint firstItem="Xb2-WV-g3B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="E3v-bG-WF9"/>
+                            <constraint firstItem="QoT-fZ-mbA" firstAttribute="leading" secondItem="0Id-nA-SyF" secondAttribute="trailing" constant="8" symbolic="YES" id="Hrv-7b-v5o"/>
+                            <constraint firstItem="QoT-fZ-mbA" firstAttribute="baseline" secondItem="0Id-nA-SyF" secondAttribute="baseline" id="JtG-X4-xrl"/>
+                            <constraint firstItem="Xb2-WV-g3B" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JuP-07-NrR"/>
+                            <constraint firstItem="Gi1-5e-0mw" firstAttribute="top" secondItem="qSD-GU-aq2" secondAttribute="bottom" constant="8" symbolic="YES" id="LrJ-y9-8iZ"/>
+                            <constraint firstItem="o1t-RQ-uUf" firstAttribute="baseline" secondItem="mBq-9y-Eyn" secondAttribute="baseline" id="OE6-Pi-ccW"/>
+                            <constraint firstItem="PWE-yd-oC7" firstAttribute="leading" secondItem="qSD-GU-aq2" secondAttribute="trailing" constant="8" symbolic="YES" id="T9y-YQ-3ch"/>
+                            <constraint firstItem="0Id-nA-SyF" firstAttribute="top" secondItem="dmL-zf-lDA" secondAttribute="bottom" constant="8" symbolic="YES" id="V2Y-CK-rNW"/>
+                            <constraint firstItem="o1t-RQ-uUf" firstAttribute="leading" secondItem="mBq-9y-Eyn" secondAttribute="trailing" constant="8" symbolic="YES" id="ahf-Qb-Hlb"/>
+                            <constraint firstItem="PWE-yd-oC7" firstAttribute="baseline" secondItem="qSD-GU-aq2" secondAttribute="baseline" id="cUK-JI-4M7"/>
+                            <constraint firstItem="mBq-9y-Eyn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="i4F-cp-byb"/>
+                            <constraint firstItem="Aet-nl-8K8" firstAttribute="leading" secondItem="Gi1-5e-0mw" secondAttribute="trailing" constant="8" symbolic="YES" id="iDZ-h2-xuW"/>
+                            <constraint firstItem="dmL-zf-lDA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="ldk-nP-MeW"/>
+                            <constraint firstItem="qSD-GU-aq2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="qFg-aN-ugC"/>
+                            <constraint firstItem="GzA-pb-g1T" firstAttribute="leading" secondItem="dmL-zf-lDA" secondAttribute="trailing" constant="8" symbolic="YES" id="qSc-J9-p8U"/>
+                            <constraint firstItem="dmL-zf-lDA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="t5q-90-ip8"/>
+                            <constraint firstItem="qSD-GU-aq2" firstAttribute="top" secondItem="0Id-nA-SyF" secondAttribute="bottom" constant="8" symbolic="YES" id="uf0-VP-Nx6"/>
+                            <constraint firstItem="GzA-pb-g1T" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="vLj-gY-kos"/>
+                            <constraint firstItem="Gi1-5e-0mw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="xw0-fv-cTg"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="casinoGoldAdded" destination="o1t-RQ-uUf" id="ZtU-3D-fSS"/>
+                        <outlet property="caveGoldAdded" destination="PWE-yd-oC7" id="rgd-lo-n4V"/>
+                        <outlet property="farmGoldAdded" destination="QoT-fZ-mbA" id="NLY-xG-FAd"/>
+                        <outlet property="houseGoldAdded" destination="Aet-nl-8K8" id="Tvo-Hx-lVZ"/>
+                        <outlet property="totalGold" destination="GzA-pb-g1T" id="DyZ-Ay-asJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
